@@ -1,0 +1,155 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/TimesNewPixel.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 96
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 1280.0
+margin_bottom = 720.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 58.0
+margin_top = 229.0
+margin_right = 1222.0
+margin_bottom = 490.0
+custom_constants/separation = 48
+
+[node name="TitleContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_right = 1164.0
+margin_bottom = 82.0
+
+[node name="Title" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/TitleContainer"]
+margin_right = 1164.0
+margin_bottom = 82.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Earthbound Inspired 16bit RPG "
+
+[node name="OptionsContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 130.0
+margin_right = 1164.0
+margin_bottom = 261.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer"]
+margin_left = 493.0
+margin_right = 671.0
+margin_bottom = 131.0
+
+[node name="StartContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer"]
+margin_right = 178.0
+margin_bottom = 41.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/StartContainer"]
+margin_right = 178.0
+margin_bottom = 41.0
+custom_constants/separation = 16
+
+[node name="Arrow" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/StartContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 24, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="Start" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/StartContainer/HBoxContainer"]
+margin_left = 40.0
+margin_right = 178.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 138, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer"]
+margin_top = 45.0
+margin_right = 178.0
+margin_bottom = 86.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/OptionsContainer"]
+margin_right = 178.0
+margin_bottom = 41.0
+custom_constants/separation = 16
+
+[node name="Arrow" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/OptionsContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 24, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="Options" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/OptionsContainer/HBoxContainer"]
+margin_left = 40.0
+margin_right = 178.0
+margin_bottom = 41.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer"]
+margin_top = 90.0
+margin_right = 178.0
+margin_bottom = 131.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/ExitContainer"]
+margin_right = 178.0
+margin_bottom = 41.0
+custom_constants/separation = 16
+
+[node name="Arrow" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/ExitContainer/HBoxContainer"]
+margin_right = 24.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 24, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="Exit" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/OptionsContainer/VBoxContainer/ExitContainer/HBoxContainer"]
+margin_left = 40.0
+margin_right = 178.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 138, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
