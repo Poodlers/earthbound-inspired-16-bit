@@ -14,10 +14,13 @@ var state = MOVE
 
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+onready var swordHitbox = $HitboxPivot/SwordHitbox
+onready var swordCollison = $HitboxPivot/SwordHitbox/CollisionShape2D
 
 func _ready():
 	animationTree.active = true
-	
+	swordCollison.disabled = true
+	swordHitbox.knockback_vector = Vector2.DOWN
 
 func _process(delta):
 	match state:
@@ -33,6 +36,7 @@ func move_state(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
+		swordHitbox.knockback_vector = input_vector
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)

@@ -57,10 +57,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=26]
@@ -111,10 +111,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=27]
@@ -165,10 +165,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=28]
@@ -219,10 +219,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -383,18 +383,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("HitboxPivot/SwordHitbox/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
 
 [sub_resource type="AnimationNodeAnimation" id=29]
 animation = "AttackLeft"
@@ -414,11 +402,9 @@ blend_point_0/pos = Vector2( -1, 0 )
 blend_point_1/node = SubResource( 30 )
 blend_point_1/pos = Vector2( 1, 0 )
 blend_point_2/node = SubResource( 31 )
-blend_point_2/pos = Vector2( 0, 1.1 )
+blend_point_2/pos = Vector2( 0, 1 )
 blend_point_3/node = SubResource( 32 )
-blend_point_3/pos = Vector2( 0, -1.1 )
-min_space = Vector2( -1, -1.1 )
-max_space = Vector2( 1, 1.1 )
+blend_point_3/pos = Vector2( 0, -1 )
 
 [sub_resource type="AnimationNodeAnimation" id=18]
 animation = "IdleLeft"
@@ -538,5 +524,6 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 17, 0 )
 shape = SubResource( 36 )
+disabled = true
 
 [editable path="HitboxPivot/SwordHitbox"]
